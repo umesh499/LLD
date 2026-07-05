@@ -8,5 +8,5 @@ public class Show {
     Screen screen;
     int startTime;
     List<Seat> bookedSeats;
-    Show
+    
 }

@@ -1,4 +1,4 @@
-package liskov.substitution;
+package solidPrinciples.liskov.substitution;
 
 public class EngineVehicle extends Vehicle {
 	public Boolean hasEngine(){

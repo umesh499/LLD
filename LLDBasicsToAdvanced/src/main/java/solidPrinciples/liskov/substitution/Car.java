@@ -1,4 +1,4 @@
-package liskov.substitution;
+package solidPrinciples.liskov.substitution;
 
 public class Car extends EngineVehicle{
 	@Override

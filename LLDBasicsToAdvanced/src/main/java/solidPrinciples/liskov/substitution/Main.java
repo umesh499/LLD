@@ -1,4 +1,4 @@
-package liskov.substitution;
+package solidPrinciples.liskov.substitution;
 
 import java.util.ArrayList;
 import java.util.List;

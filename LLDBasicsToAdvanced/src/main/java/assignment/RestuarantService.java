@@ -1,14 +1,12 @@
 package assignment;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class RestuarantService {
     
 }
 
 class Restuarant{
-
-}
-
-class Menu{
 
 }
 
@@ -57,6 +55,29 @@ class PaymenProcessorFactory{
     }
 }
 
+
+interface Menu{
+    int getTotalItemCount();
+    double 
+}
+
 class OrderIdGenerator{
-    
+    static AtomicInteger count;
+    private static OrderIdGenerator instance;
+    private OrderIdGenerator(){
+    }
+    public static OrderIdGenerator getInstance(){
+        if(instance == null){
+            synchronized(OrderIdGenerator.class){
+                if(instance == null){
+                    instance = new OrderIdGenerator();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public int getId(){
+        return count.incrementAndGet();
+    }
 }

@@ -8,13 +8,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class RestuarantService {
     static MenuTree root = new Category("Menu");
     public static void main(String[] args) {
-        System.out.println("Show Menu !");
+
+        System.out.println("Show Menu !\\n");
         getMenuDetails();
-        System.out.println("Customer Order Item !");
+        //System.out.println("Customer Order Item !\n");
         MenuItem item = new MenuItem("Paneer Butter Masala", 220,1);
-        System.out.println("Customer Customise Item !");
+
+        //System.out.println("Customer Customise Item !");
         MenuTree m = new PackagingDecorator(new CheeseDecorator(item, 20), 10);
-        System.out.println("Customised Item Price"+m.printMenuItem());
+       // System.out.println("Customised Item Price:::"+m.printMenuItem());
         List<MenuTree> menuList = new ArrayList<>();
         menuList.add(item);
         IPayment payment = PaymenProcessorFactory.getPaymentInstance("UPI");
